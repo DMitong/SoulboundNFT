@@ -9,10 +9,17 @@ contract SoulboundNFT is ERC1155 {
     uint256 public constant ITEM_TOKEN_2 = 2;
     uint256 public constant ITEM_TOKEN_3 = 3;
     uint256 public constant ITEM_TOKEN_4 = 4;
+    uint256 public constant ITEM_TOKEN_5 = 5;
+    address public owner;
 
     mapping(address => bool) public mainTokenOwners;
 
     constructor(string memory uri) ERC1155(uri) {}
+
+    modifier onlyOwner() {
+        msg.sender == owner;
+        _;
+    }
 
     function mintMainToken(address account) public onlyOwner {
         require(
@@ -32,12 +39,12 @@ contract SoulboundNFT is ERC1155 {
             mainTokenOwners[account],
             "This account does not own main token"
         );
-        uint256[] memory tokenId = [
-            ITEM_TOKEN_1,
-            ITEM_TOKEN_2,
-            ITEM_TOKEN_3,
-            ITEM_TOKEN_4
-        ];
+        uint256[] memory tokenId = new uint256[](5);
+        tokenId[0] = ITEM_TOKEN_1;
+        tokenId[1] = ITEM_TOKEN_2;
+        tokenId[2] = ITEM_TOKEN_3;
+        tokenId[3] = ITEM_TOKEN_4;
+        tokenId[4] = ITEM_TOKEN_5;
 
         _mintBatch(account, tokenId, amounts, "");
     }

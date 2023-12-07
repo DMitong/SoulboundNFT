@@ -23,9 +23,14 @@ The contract defines the following constructor and methods:
 
 ## Contract Deployment
 
-This contract was deployed using foundry:
+This contract was deployed to the Base Goerli network:
 
-## Foundry
+- The first contract was deployed to [this address](https://goerli.basescan.org/address/0x785b4df4ac7aa4b16ae6892624746f0e1b4c1ad5): **0x785B4df4Ac7Aa4b16AE6892624746F0e1b4c1aD5**
+- The more updated version of the contract, whose code is in this file is deployed to [this address](https://goerli.basescan.org/address/0x4f5956d715d682014b1b215e5c6d9c6b21f1eb5d): **0x4f5956d715D682014B1b215E5c6d9c6b21f1Eb5d**
+
+## Usage
+
+This contract was developed and deployed using Foundry.
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
@@ -36,46 +41,40 @@ Foundry consists of:
 - **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
 - **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
+### Foundry Documentation
 
 https://book.getfoundry.sh/
 
-## Usage
+### Foundry Usage
 
-### Build
+#### Build
 
 ```shell
 $ forge build
 ```
 
-### Test
+#### Test
 
 ```shell
 $ forge test
 ```
 
-### Format
+#### Format
 
 ```shell
 $ forge fmt
 ```
 
-### Gas Snapshots
+#### Gas Snapshots
 
 ```shell
 $ forge snapshot
 ```
 
-### Anvil
+#### Anvil
 
 ```shell
 $ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
 
 ### Cast
