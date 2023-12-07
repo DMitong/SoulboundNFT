@@ -11,6 +11,7 @@ The contract is written in Solidity, a programming language for smart contracts.
 - `ITEM_TOKEN_2`: A constant that represents the token ID of the second item token. The value is set to 2.
 - `ITEM_TOKEN_3`: A constant that represents the token ID of the third item token. The value is set to 3.
 - `ITEM_TOKEN_4`: A constant that represents the token ID of the fourth item token. The value is set to 4.
+- `ITEM_TOKEN_5`: A constant that represents the token ID of the fourth item token. The value is set to 5.
 - `mainTokenOwners`: A mapping that stores the owners of the main token. The key is an address and the value is a boolean. The value is initialized to false for all addresses.
 
 The contract defines the following constructor and methods:
